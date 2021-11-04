@@ -1,0 +1,42 @@
+---
+menu: Views
+name: Product Tile
+route: /views/product-tile
+---
+
+import { Playground, Props } from "docz";
+import { Code } from "gatsby-theme-docz/src/components/Code";
+import { ProductTile } from "@components/Product/ProductTile";
+import viewSourceCode from "!!raw-loader!@components/Product/views/Tile/Tile.tsx";
+import hookSourceCode from "!!raw-loader!@components/Product/hooks/useProductTile.ts";
+
+# Product Tile
+
+This view can be used in Category detail page in Product list as product tile.
+
+## Properties
+
+<Props of={ProductTile} />
+
+## Basic usage
+
+<Playground>
+    <ProductTile id={2} />
+</Playground>
+
+## Source code
+
+### Hook
+
+<Code className={"ts"}>{hookSourceCode}</Code>
+
+### View
+
+<Code className={"tsx"}>{viewSourceCode}</Code>
+
+## Used components
+
+-   [ProductButton](/components/button)
+-   [ProductImage](/components/image)
+-   [ProductPrice](/components/price)
+-   [ProductRating](/components/rating)

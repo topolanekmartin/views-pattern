@@ -1,0 +1,28 @@
+---
+menu: Components
+name: Product Rating
+route: /components/rating
+---
+
+import { Playground, Props } from "docz";
+import { Code } from "gatsby-theme-docz/src/components/Code";
+import { ProductRating } from "@components/Product/components/Rating";
+import viewSourceCode from "!!raw-loader!@components/Product/components/Rating/Rating.tsx";
+
+# Product Rating
+
+## Properties
+
+<Props of={ProductRating} />
+
+## Basic usage
+
+<Playground>
+    <ProductRating rating={{ rate: 3.7, count: 10 }} />
+</Playground>
+
+## Source code
+
+### View
+
+<Code className={"tsx"}>{viewSourceCode}</Code>
