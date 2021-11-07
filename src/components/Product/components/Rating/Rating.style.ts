@@ -6,6 +6,8 @@ export const StyledProductRatingContainer = styled.div`
     font-size: 0;
 
     .MuiTypography-root {
+        display: inline-block;
+        vertical-align: middle;
         line-height: normal;
         margin: 4px 0 0 5px;
         font-size: 12px;
@@ -13,6 +15,7 @@ export const StyledProductRatingContainer = styled.div`
     }
 
     svg {
+        vertical-align: middle;
         color: #ffdf00;
     }
 `;

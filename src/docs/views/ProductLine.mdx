@@ -1,0 +1,43 @@
+---
+menu: Views
+name: Product Line
+route: /views/product-line
+---
+
+import { Playground, Props } from "docz";
+import { Code } from "gatsby-theme-docz/src/components/Code";
+import { ProductLine } from "@components/Product/ProductLine";
+import viewSourceCode from "!!raw-loader!@components/Product/views/Line/Line.tsx";
+import hookSourceCode from "!!raw-loader!@components/Product/hooks/useProductLine.ts";
+
+# Product Tile
+
+This view can be used in list items of Most sold products section.
+
+## Properties
+
+<Props of={ProductLine} />
+
+## Basic usage
+
+<Playground>
+    <ProductLine id={3} />
+</Playground>
+
+## Source code
+
+### Hook
+
+<Code className={"ts"}>{hookSourceCode}</Code>
+
+### View
+
+<Code className={"tsx"}>{viewSourceCode}</Code>
+
+## Used components
+
+-   [ProductAvailability](/components/availability)
+-   [ProductButton](/components/button)
+-   [ProductImage](/components/image)
+-   [ProductPrice](/components/price)
+-   [ProductRating](/components/rating)

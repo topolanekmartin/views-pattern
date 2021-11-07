@@ -3,6 +3,8 @@ export type ProductRatingType = {
     count: number;
 };
 
+export type ProductAvailabilityType = "in-stock" | "out-of-stock";
+
 export type ProductType = {
     id: number;
     title: string;
@@ -11,4 +13,5 @@ export type ProductType = {
     category: string;
     image: string;
     rating: ProductRatingType;
+    availability: ProductAvailabilityType;
 };
