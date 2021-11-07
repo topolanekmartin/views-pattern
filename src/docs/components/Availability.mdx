@@ -1,0 +1,30 @@
+---
+menu: Components
+name: Product Availability
+route: /components/availability
+---
+
+import { Playground, Props } from "docz";
+import { Code } from "gatsby-theme-docz/src/components/Code";
+import { ProductAvailability } from "@components/Product/components/Availability";
+import viewSourceCode from "!!raw-loader!@components/Product/components/Availability/Availability.tsx";
+
+# Product Rating
+
+## Properties
+
+<Props of={ProductAvailability} />
+
+## Basic usage
+
+<Playground>
+    <ProductAvailability availability={'in-stock'} />
+    <br />
+    <ProductAvailability availability={'out-of-stock'} />
+</Playground>
+
+## Source code
+
+### View
+
+<Code className={"tsx"}>{viewSourceCode}</Code>
