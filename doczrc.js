@@ -1,5 +1,5 @@
 export default {
     typescript: true,
-    base: "/docz",
+    base: "/views-pattern",
     dest: "/live",
 };
