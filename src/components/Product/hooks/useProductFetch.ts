@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Product } from "@components/Product/types";
+import { ProductType } from "@components/Product/types";
 
 export const useProductFetch = (id: number) => {
-    const [product, setProduct] = useState<Product | null>(null);
+    const [product, setProduct] = useState<ProductType | null>(null);
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [isError, setIsError] = useState<boolean>(false);
 

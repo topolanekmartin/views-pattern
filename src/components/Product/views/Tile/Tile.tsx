@@ -32,7 +32,7 @@ export const ProductTileView: FC<ProductTileViewProps> = ({
     return (
         <StyledProductTileContainer>
             <StyledProductTileImage src={product.image} />
-            <StyledProductTileRating rating={product.rating} />
+            <StyledProductTileRating {...product.rating} />
             <StyledProductTileTitle>{product.title}</StyledProductTileTitle>
             <StyledProductTilePrice price={product.price} />
             <StyledProductTileButton onClick={onAddToBasket}>
