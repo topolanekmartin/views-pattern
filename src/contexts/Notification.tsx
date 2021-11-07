@@ -15,6 +15,7 @@ type NotificationContextType = {
     setMessage: Dispatch<SetStateAction<string>>;
     setIsVisible: Dispatch<SetStateAction<boolean>>;
     closeNotification: () => void;
+    showMessage: (message: string) => void;
 };
 
 const defaultValues: NotificationContextType = {
@@ -24,6 +25,7 @@ const defaultValues: NotificationContextType = {
     setMessage: () => null,
     setIsVisible: () => null,
     closeNotification: () => null,
+    showMessage: () => null,
 };
 
 const NotificationContext =
@@ -42,6 +44,10 @@ export const NotificationProvider: FC<NotificationContextType> = ({
         setIsVisible(false);
         setMessage("");
     }, [setIsVisible, setMessage]);
+    const showMessage = useCallback((message: string) => {
+        setMessage(message);
+        setIsVisible(true);
+    }, []);
 
     return (
         <NotificationContext.Provider
@@ -52,6 +58,7 @@ export const NotificationProvider: FC<NotificationContextType> = ({
                 setMessage,
                 setIsVisible,
                 closeNotification,
+                showMessage,
             }}
         >
             {children}

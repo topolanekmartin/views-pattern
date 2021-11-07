@@ -1,6 +1,6 @@
-import { useProductFetch } from "./useProductFetch";
 import { ButtonProps } from "@material-ui/core";
-import { useProductNotification } from "@components/Product/hooks/useProductNotification";
+import { useNotificationContext } from "@contexts/Notification";
+import { useProductFetch } from "./useProductFetch";
 
 type UseProductTileArgs = {
     id: number;
@@ -8,7 +8,7 @@ type UseProductTileArgs = {
 
 export const useProductTile = ({ id }: UseProductTileArgs) => {
     const { product, isLoading } = useProductFetch(id);
-    const { showMessage } = useProductNotification();
+    const { showMessage } = useNotificationContext();
     const onAddToBasket: ButtonProps["onClick"] = () => {
         showMessage("Product was added to cart!");
     };
