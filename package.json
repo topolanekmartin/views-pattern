@@ -4,7 +4,9 @@
   "description": "Demo for views/components/hooks pattern demonstration",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development docz dev"
+    "start": "NODE_ENV=development docz dev",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "react",
@@ -18,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/topolanekmartin/views-pattern/issues"
   },
-  "homepage": "https://github.com/topolanekmartin/views-pattern#readme",
+  "homepage": "https://topolanekmartin.github.io/views-pattern",
   "dependencies": {
     "@atlasgroup/react-wrap": "^1.2.0",
     "@emotion/react": "^11.5.0",
@@ -35,6 +37,7 @@
     "gatsby-theme-docz": "^2.3.1",
     "gatsby-theme-material-ui": "^5.0.0",
     "gatsby-theme-material-ui-top-layout": "^5.0.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.4.1",
     "raw-loader": "^4.0.2",
     "react": "^17.0.2",
