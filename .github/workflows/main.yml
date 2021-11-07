@@ -32,3 +32,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run build
         run: yarn build
+        
+      - name: Move generated files
+        run: mv .Docz/dist/* public/
