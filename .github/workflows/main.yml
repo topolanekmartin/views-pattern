@@ -24,9 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - name: List files
-        run: ls -a
 
       # Runs a single command using the runners shell
       - name: Dependencies
@@ -38,6 +35,9 @@ jobs:
         
       - name: Move generated files
         run: mv .docz/dist/* ./
+        
+      - name: Remove README.md
+        run: rm README.md
         
       - name: List files
         run: ls -a
