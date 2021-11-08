@@ -35,3 +35,6 @@ jobs:
         
       - name: Move generated files
         run: mv .docz/dist/* ./
+        
+      - name: List files
+        run: ls -a
