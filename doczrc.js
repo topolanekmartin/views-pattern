@@ -1,4 +1,4 @@
 export default {
     typescript: true,
-    base: "/views-pattern",
+    base: "/views-pattern/",
 };
