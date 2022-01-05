@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development docz dev",
-    "build": "yarn docz build",
+    "build": "docz build",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "yarn build:docz && gh-pages -d .docz/dist"
   },
   "keywords": [
     "react",
