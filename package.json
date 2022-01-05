@@ -6,7 +6,6 @@
   "scripts": {
     "start": "NODE_ENV=development docz dev",
     "build": "docz build",
-    "predeploy": "yarn run build",
     "deploy": "yarn build && gh-pages -d .docz/dist"
   },
   "keywords": [
