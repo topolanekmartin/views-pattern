@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2
-      - with: 
+      - with:
           persist-credentials: false
 
       - name: Install dependencies
@@ -31,7 +31,4 @@ jobs:
 
       - name: Run build
         run: yarn build
-        
-      - name: Move generated files to ./docs folder
-        run: mv .docz/dist/* ./docs
-        
+
