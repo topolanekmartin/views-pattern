@@ -1,23 +1,25 @@
-name: CI
+name: 'deploy'
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    deploy:
-        name: 'Deploy'
-        runs-on: 'ubuntu-latest'
+  deploy:
+    name: 'Deploy'
+    runs-on: 'ubuntu-latest'
 
-        if: "!contains(github.event.head_commit.message,'#no-deploy')"
-        steps:
-            - uses: actions/checkout@v2
-            - uses: fusion-engineering/setup-git-credentials@v2
-                with:
-                credentials: ${{secrets.GIT_CREDENTIALS}}
+    if: "!contains(github.event.head_commit.message,'#no-deploy')"
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: '${{ secrets.PRIVATE_ACCESS_TOKEN_DEPLOYMENT }}'
+      - uses: fusion-engineering/setup-git-credentials@v2
+        with:
+          credentials: ${{ secrets.GIT_CREDENTIALS }}
 
-            - run: |
-                git config --global user.name 'gh-pages-bot'
-                git config --global user.email 'gh-pages-bot@martintopolanek.cz'
-            - run: yarn install
-            - run: yarn deploy
+      - run: |
+          git config --global user.name 'gh-pages-bot'
+          git config --global user.email 'gh-pages-bot@atlasgroup.cz'
+      - run: yarn install
+      - run: yarn deploy
