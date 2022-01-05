@@ -13,5 +13,8 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
+            - run: |
+                git config --global user.name 'gh-pages-bot'
+                git config --global user.email 'gh-pages-bot@martintopolanek.cz'
             - run: yarn install
             - run: yarn deploy
